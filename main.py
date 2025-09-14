@@ -23,7 +23,7 @@ user_age = None  # global variable
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "http://localhost:8000"],
+    allow_origins=["https://silver-stroopwafel-749c21.netlify.app/", "http://localhost:8000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
