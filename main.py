@@ -30,8 +30,6 @@ app.add_middleware(
 )
 
 
-vite_dist = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
-app.mount("/assets", StaticFiles(directory=os.path.join(vite_dist, "assets")), name="assets")
 
 
 @app.get("/")
