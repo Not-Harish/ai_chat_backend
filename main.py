@@ -32,14 +32,14 @@ app.add_middleware(
 
 
 
-@app.get("/")
-async def serve_index():
-    return FileResponse(os.path.join(vite_dist, "index.html"))
+#@app.get("/")
+#async def serve_index():
+#    return FileResponse(os.path.join(vite_dist, "index.html"))
 
 
-@app.get("/{full_path:path}")
-async def spa(full_path: str):
-    return FileResponse(os.path.join(vite_dist, "index.html"))
+#@app.get("/{full_path:path}")
+#async def spa(full_path: str):
+#    return FileResponse(os.path.join(vite_dist, "index.html"))
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = create_model()
 model.load_state_dict(torch.load("age_prediction_resnet34.pth", map_location=device))
